@@ -6,8 +6,9 @@ const websiteService = {
     return website;
   },
   postWebsiteInfo: async (webSiteInfo) => {
-    const newWebsite = new Site(webSiteInfo);
+    const newWebsite = new Website(webSiteInfo);
     await newWebsite.save();
+    console.log("newWebsite")
     return newWebsite._id;
   },
 };
