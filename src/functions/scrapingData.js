@@ -17,7 +17,7 @@ const scrapingData = async (url) => {
       websiteRank: await getElementText(driver, '//*[@id="overview"]/div/div/div/div[3]/div/div[1]/div'),
       totalVisits: await getElementText(driver, '//*[@id="traffic"]/div/div/div[3]/div[1]/div[1]/p[2]'),
       websiteCategory: await getElementText(driver, '//*[@id="overview"]/div/div/div/div[5]/div/dl/div[6]/dd'),
-      websiteRankChange: await getElementText(driver, '//*[@id="traffic"]/div/div/div[3]/div[1]/div[2]/p[2]/span'),
+      websiteRankChange: await getWebsiteRankChange (driver, '//*[@id="traffic"]/div/div/div[3]/div[1]/div[2]/p[2]/span'),
       durationAverageVisit: await getElementText(driver, '//*[@id="traffic"]/div/div/div[3]/div[1]/div[5]/p[2]'),
       pagesPerVisit: await getElementText(driver, '//*[@id="traffic"]/div/div/div[3]/div[1]/div[4]/p[2]'),
       rejectionRate: await getElementText(driver, '//*[@id="traffic"]/div/div/div[3]/div[1]/div[3]/p[2]'),
@@ -42,6 +42,18 @@ const getGenderDistribution = async (driver) => {
     male: genreArray[0],
     female: genreArray[1],
   };
+};
+
+const getWebsiteRankChange = async (driver, xpath) => {
+  const element = await driver.findElement(By.xpath(xpath));
+  if (element) {
+    const classList = await element.getAttribute('class');
+    if (classList && classList.includes('app-parameter-change--down')) {
+      return `-${await element.getText()}`;
+    } else {
+      return `+${await element.getText()}`;
+    }
+  }
 };
 
 const getAgeDistribution = async (driver) => {

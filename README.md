@@ -32,7 +32,7 @@ As informações possível incluem:
 - "websiteRank" - Classificação global
 - "totalVisits" - Total de visitas recebidas
 - "websiteCategory" - Categoria
-- "websiteRankChange" - Percentual de cresicmento
+- "websiteRankChange" - Percentual de cresicmento do último mês
 - "durationAverageVisit" - Duração média da visita
 - "pagesPerVisit" - Páginas por visita
 - "rejectionRate" - Taxa de rejeição
@@ -44,7 +44,7 @@ As informações possível incluem:
 
 ### POST /salve_info:
 
-**Descrição:** Recebe uma URL, faz o scraping dos dados e os amazena no banco. Ela retorna um Status 201, juntamente com o ID dos dados cadastrados.
+**Descrição:** Recebe uma URL, faz o scraping dos dados e os amazena no banco. Após isso, retorna um ID dos dados cadastrados.
 
 > Obs: A resposta demora alguns segundos, pois a mesma depende da execução do Selenium. Todos os dados são armazenados em formato de String!
 
@@ -82,51 +82,47 @@ As informações possível incluem:
     {
         "countryListContainer": {
             "first": {
-                "name": "United States",
-                "value": "19.59%"
+                "name": "Brazil",
+                "value": "87.13%"
             },
             "second": {
-                "name": "Brazil",
-                "value": "8.92%"
+                "name": "Colombia",
+                "value": "5.02%"
             },
             "third": {
-                "name": "India",
-                "value": "4.09%"
+                "name": "Spain",
+                "value": "3.31%"
             },
             "fourth": {
-                "name": "Argentina",
-                "value": "3.27%"
+                "name": "Portugal",
+                "value": "3.26%"
             },
             "fifth": {
-                "name": "United Kingdom",
-                "value": "3.12%"
-            },
-            "others": {
-                "name": "Others",
-                "value": "61.01%"
+                "name": "France",
+                "value": "1.29%"
             }
         },
         "genderDistContainer": {
-            "male": "46.67%",
-            "female": "53.33%"
+            "male": "55.1%",
+            "female": "44.9%"
         },
         "ageDistContainer": {
-            "range_18_24": "18.4%",
-            "range_25_34": "31.25%",
-            "range_35_44": "20.61%",
-            "range_45_54": "14.26%",
-            "range_55_64": "10.48%",
-            "range_65_or_more": "4.99%"
+            "range_18_24": "12.35%",
+            "range_25_34": "31.93%",
+            "range_35_44": "20.59%",
+            "range_45_54": "15.25%",
+            "range_55_64": "14.86%",
+            "range_65_or_more": "5.02%"
         },
-        "_id": "65839c9b19dbcf4465e071ef",
-        "url": "https://www.instagram.com/",
-        "websiteRank": "#4",
-        "totalVisits": "6.6B",
-        "websiteCategory": "Computers Electronics and Technology > Social Media Networks",
-        "websiteRankChange": "1.83%",
-        "durationAverageVisit": "00:08:19",
-        "pagesPerVisit": "11.53",
-        "rejectionRate": "35.23%",
+        "_id": "6583b943409c37aa9f097133",
+        "url": "https://www.exemplo.com/",
+        "websiteRank": "#1,699,599\n65,752",
+        "totalVisits": "26.3K",
+        "websiteCategory": "Business and Consumer Services > Digital Marketing",
+        "websiteRankChange": "-3.56%",
+        "durationAverageVisit": "00:00:17",
+        "pagesPerVisit": "1.73",
+        "rejectionRate": "58.21%",
         "__v": 0
     }
 ```
