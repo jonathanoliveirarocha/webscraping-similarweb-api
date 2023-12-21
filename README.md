@@ -64,7 +64,7 @@ As informações possível incluem:
     }
 ```
 
-### GET /get_info:
+### POST /get_info:
 
 **Descrição:** Recebe uma URL, e retorna os dados armazenados referentes a ela, caso houver.
 
