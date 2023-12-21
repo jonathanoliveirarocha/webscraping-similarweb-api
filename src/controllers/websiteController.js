@@ -8,9 +8,9 @@ const websiteController = {
       const data = await websiteService.getWebsiteInfo(url);
       if (!data) {
         res.status(404).json({ error: "This website has not yet been registered!" });
+      } else {
+        res.json(data);
       }
-
-      res.json(data);
     } catch {
       res.status(500).json({ error: "Error processing the request!" });
     }
