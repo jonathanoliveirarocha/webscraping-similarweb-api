@@ -41,8 +41,8 @@ const navigateToUrl = async (driver, url) => {
 const getGenderDistribution = async (driver) => {
   const genreArray = await getElementsText(driver, By.className("wa-demographics__gender-legend-item-value"));
   return {
-    male: genreArray[0],
-    female: genreArray[1],
+    male: genreArray[1],
+    female: genreArray[0],
   };
 };
 
