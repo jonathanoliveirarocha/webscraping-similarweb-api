@@ -21,7 +21,7 @@ Este projeto foi desenvolvido com o intuito de realizar o webscraping de informa
 - Node.js
 - Express
 - MongoDB
-- Selenium WebDriver (Atente-se à observasão!)
+- Selenium WebDriver (Atente-se à observação abaixo!)
 
 > Obs: Como o site leva a uma página de validação em caso de execução por bots (mesmo enviando os headers para simular a execução de um navegador), não foi possível extrair o conteúdo HTML da página diretamente por meio do "cheerio". Sendo assim, para passar pelo sistema de "Challenge Validation", tive que optar pelo uso do Selenium para a raspagem dos dados.
 
