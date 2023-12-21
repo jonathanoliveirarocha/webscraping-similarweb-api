@@ -66,7 +66,7 @@ As informações possível incluem:
 
 ### GET /get_info:
 
-**Descrição:** Recebe uma URL, e retorna os dados armazenados referentes há ela, caso houver.
+**Descrição:** Recebe uma URL, e retorna os dados armazenados referentes a ela, caso houver.
 
 #### Exemplo de Entrada:
 
