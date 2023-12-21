@@ -6,7 +6,7 @@ const scrapingData = async (url) => {
   try {
     await navigateToUrl(driver, url);
 
-    await driver.wait(until.elementLocated(By.className("wa-overview__title")));
+    await driver.wait(until.elementLocated(By.className('wa-overview__title')), 10000);
 
     const genderDistContainer = await getGenderDistribution(driver);
     const ageDistContainer = await getAgeDistribution(driver);
@@ -27,6 +27,8 @@ const scrapingData = async (url) => {
     };
 
     return elements;
+  } catch (error) {
+    console.error('Error:', error);
   } finally {
     await driver.quit();
   }
