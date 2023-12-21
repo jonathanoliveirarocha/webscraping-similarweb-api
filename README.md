@@ -28,7 +28,7 @@ Este projeto foi desenvolvido com o intuito de realizar o webscraping de informa
 ## Informações Armazenadas
 
 As informações possível incluem:
-- "url"  A URL do site armazenado
+- "url" - A URL do site armazenado
 - "websiteRank" - Classificação global
 - "totalVisits" - Total de visitas recebidas
 - "websiteCategory" - Categoria
@@ -137,7 +137,7 @@ Para o desenvolvimento da API, optei por utilizar MVC, para facilitar a organiza
 - **/src/controllers:** Define as funções de manipulação das requisições
 - **/src/functions:** Define as funções utilitárias para fins específicos
 - **/src/models:** Define os models para armazenamento no Banco de Dados
-- **/src/routes:** Define as rotas da api
+- **/src/routes:** Define as rotas da API
 - **/src/services:** Define os arquivos específicos para manipulação do Banco de Dados
 
 
